@@ -130,6 +130,7 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
+  margin-bottom:70px ;
   }
 
 .gallery img {
@@ -137,32 +138,41 @@ main {
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.gallery img:hover {
+    transform: translateY(-5px);
 }
 
 .fleet-page {
     padding: 20px;
-    background-color: #f0f8ff; /* Light blue/gray background, match the image */
+    background-color: #f0f8ff;
 }
 
 .fleet-header {
     text-align: center;
     margin-bottom: 30px;
-    color: #003366; /* Dark blue header text, to math the image */
+    color: #003366; 
 }
 
 .aircraft-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
 }
 
 .aircraft-card {
     background-color: #fff;
-    border-radius: 10px; /* Rounded corners, to match image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     padding: 20px;
     text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.aircraft-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .aircraft-image {
@@ -181,7 +191,7 @@ main {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background for number */
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 5px 8px;
     border-radius: 5px;
@@ -190,21 +200,21 @@ main {
 
 .aircraft-card h3 {
     margin-bottom: 10px;
-    color: #003366; /* Darker blue for the name to match image */
+    color: #003366;
 }
 
 .pax-capacity {
     display: flex;
-    justify-content: center;  /* This will center the labels */
-    gap: 5px;  /* Spacing between the labels */
+    justify-content: center;
+    gap: 5px;
     margin-bottom: 10px;
 }
 
 .pax-label {
-    background-color: #f0f0f0; /* Light gray to match image */
+    background-color: #f0f0f0;
     color: #333;
     padding: 5px 10px;
-    border-radius: 20px; /* Rounded pill shape */
+    border-radius: 20px; 
     font-size: 0.9em;
 }
 
@@ -212,10 +222,303 @@ main {
     margin-top: 15px;
     text-align: left;
     font-size: 0.9em;
-    color: #555;  /* Darker grey text */
+    color: #555
 }
 
 .aircraft-details p {
     margin-bottom: 5px;
 }
 
+.container {
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+}
+
+.airports-grid {
+  display: flex;
+  gap: 20px; 
+}
+
+.airport-card {
+  background-color: #00183E; 
+  border-radius: 5px; 
+  overflow: hidden; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.airport-card img {
+  width: 100%; 
+  height: auto; 
+  display: block; 
+}
+
+.airport-info {
+  padding: 15px; 
+  text-align: left; 
+}
+
+.airport-info h3 {
+  margin: 0 0 5px; 
+  font-size: 30px; 
+}
+
+.airport-info p {
+  margin: 0; 
+  font-size: 0.9em; 
+  color: #ecf0f1; 
+}
+
+.h1__partners {
+  color:#00183E;
+  text-align: left;
+  padding-left: 20px;
+   font-size: 2em;
+}
+
+.partners {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.partners img {
+  width: 300px;
+  height: auto;
+  margin: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.partners img:hover {
+    transform: translateY(-5px);}
+
+
+.footer {
+  background-color: black; 
+  color: #ffffff;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  flex: 1 1 250px;
+  margin-bottom: 20px;
+}
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.tagline {
+  margin-bottom: 15px;
+}
+.social-icons a {
+  margin-right: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+}
+.social-icons a:hover {
+  color: #ffcc00; 
+}
+
+.footer-center {
+  flex: 1 1 200px;
+  margin-bottom: 20px;
+}
+.footer-center h4 {
+  margin-bottom: 10px;
+}
+.footer-center ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-center li {
+  margin-bottom: 8px;
+}
+.footer-center a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer-center a:hover {
+  text-decoration: underline;
+}
+
+.footer-right {
+  flex: 1 1 200px;
+  margin-bottom: 20px;
+}
+.footer-right h4 {
+  margin-bottom: 10px;
+}
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-right li {
+  margin-bottom: 8px;
+}
+.footer-right a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ffffff;
+  margin-top: 20px;
+  padding-top: 20px;
+  text-align: center;
+}
+.footer-bottom p {
+  margin: 5px 0;
+}
+
+@media (max-width: 700px) {
+ 
+  .airport-info p {
+    font-size: 0.8em; 
+  }
+
+
+  .h1__partners {
+    font-size: 1.5em; 
+    padding-left: 10px; 
+  }
+
+
+  .partners {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+
+  .partners img {
+    width: 200px;
+    margin: 10px 0;
+  }
+
+
+  .footer {
+    padding: 20px 10px;
+    font-size: 13px;
+  }
+
+ 
+  .footer-container {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+    text-align: center; 
+  }
+
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .tagline {
+    font-size: 0.9em;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+
+  .footer-center h4,
+  .footer-right h4 {
+    font-size: 1.2em;
+  }
+
+  .footer-center ul,
+  .footer-right ul {
+    padding: 0;
+  }
+
+
+  .footer-center li,
+  .footer-right li {
+    margin-bottom: 8px;
+  }
+
+
+  .footer-center a,
+  .footer-right a {
+    font-size: 0.9em;
+  }
+
+
+  .footer-bottom {
+    padding: 15px 10px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .h1__partners {
+    font-size: 1.2em;
+    padding-left: 5px;
+  }
+
+  .partners img {
+    width: 150px;
+  }
+
+  .footer {
+    padding: 15px 10px;
+    font-size: 12px;
+  }
+
+
+  .footer-container {
+    align-items: center;
+  }
+
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .tagline {
+    font-size: 0.8em;
+  }
+
+  .social-icons a {
+    font-size: 16px;
+  }
+
+
+  .footer-center h4,
+  .footer-right h4 {
+    font-size: 1em;
+  }
+
+
+  .footer-center li,
+  .footer-right li {
+    margin-bottom: 6px;
+  }
+
+
+  .footer-center a,
+  .footer-right a {
+    font-size: 0.8em;
+  }
+}
